@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(1.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.outer-square {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-bg {
+    background: linear-gradient(-45deg, #ee7752, yellow, orange, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 1s ease infinite;
+}
+
+@keyframes gradiant {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+.inner-square {
+    width: 230px;
+    height: 230px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.laps{
+    height: 300px;
+    overflow: auto;
+}
+
+.text {
+    color: white;
+    font-size: 34px;
+
+}
+
+.minute {
+    font-size: 42px;
+}
+.sec {
+    font-size: 36px;
+}
+.msec {
+    font-size: 32px;
+}
+
+.button-wrapper {
+    width: 250px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.laps {
+    list-style: none;
+    color: #fff;
+    width: 250px;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    padding: 30px;
+}
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+.lap-item {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #111;
+    border: 1px solid #444;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+.number {
+    color: #cccccc;
+}
+.time-stamp {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lap-clear-button {
+    position: absolute;
+    position: fixed;
+    z-index: 1000;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 130px;
+    padding: 10px 0;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
